@@ -1,0 +1,36 @@
+import {Meta, Stylesheet} from "@nulib/canopy/head";
+import {CanopyHeader, CanopyFooter} from "@nulib/canopy/ui";
+
+export function Head() {
+  return (
+    <>
+      <Meta />
+      <Stylesheet />
+    </>
+  );
+}
+
+export function App({children}) {
+  return (
+    <>
+      <CanopyHeader logo={Logo} />
+      <main>{children}</main>
+      <CanopyFooter
+        logo={Logo}
+        description="A digital collection of IIIF works, with context and narrative."
+      >
+        <p>Copyright 2026 Site Title, MIT License. A Canopy IIIF Project.</p>
+      </CanopyFooter>
+    </>
+  );
+}
+
+export const Logo = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <circle className="canopy-logo-backlight" cx="250" cy="250" r="250" />
+    <path
+      className="canopy-logo-overlay"
+      d="M125,33.45C50.28,76.68,0,157.47,0,250s50.28,173.32,125,216.55c74.72-43.23,125-124.01,125-216.55S199.72,76.68,125,33.45Z"
+    />
+  </svg>
+);

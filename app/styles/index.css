@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "@nulib/canopy/ui/styles/index.css";
+@import "./custom.css";
+
+/*
+ * The site's own styles. Canopy's tokens set its look: Google Sans Flex, served from the
+ * site itself, in two weights; rounded corners and soft shadows; the colors canopy.yml
+ * picks. Set any token in `@layer properties`, here or in `custom.css`, to restyle every
+ * component at once, with no `!important`.
+ * @see https://nulib-ds.github.io/canopy/docs/theme/
+ */
+
+@utility max-w-content {
+  max-width: var(--canopy-container-content, 75rem);
+}
+
+@utility max-w-wide {
+  max-width: var(--canopy-container-wide, 90rem);
+}
